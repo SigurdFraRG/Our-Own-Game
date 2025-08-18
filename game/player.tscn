@@ -1,19 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://boarxw5kavvvb"]
+[gd_scene load_steps=3 format=3 uid="uid://dfm7ikm7qa3ft"]
 
 [ext_resource type="Texture2D" uid="uid://yarxmxwp46el" path="res://Skærmbillede_2025-03-17_091109-removebg-preview.png" id="1_4flbx"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-radius = 181.667
-height = 473.333
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
+radius = 56.0
+height = 144.0
 
-[node name="player" type="Area2D"]
-position = Vector2(34, 33)
-scale = Vector2(0.3, 0.3)
-metadata/_edit_group_ = true
+[node name="player" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 0)
-shape = SubResource("CapsuleShape2D_onrkg")
+shape = SubResource("CapsuleShape2D_4flbx")
