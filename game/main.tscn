@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bday58uo6gp1b"]
+[gd_scene load_steps=3 format=3 uid="uid://bday58uo6gp1b"]
 
 [ext_resource type="PackedScene" uid="uid://dfm7ikm7qa3ft" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c5m28lb34u6fl" path="res://player.gd" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 
@@ -64,3 +65,4 @@ polygon = PackedVector2Array(16, 8, 24, 8, 24, 16, 16, 16)
 
 [node name="player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(576, 328)
+script = ExtResource("2_0xm2m")
