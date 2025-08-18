@@ -1,48 +1,73 @@
-[gd_scene load_steps=3 format=3 uid="uid://bday58uo6gp1b"]
+[gd_scene load_steps=5 format=3 uid="uid://bday58uo6gp1b"]
 
 [ext_resource type="PackedScene" uid="uid://dfm7ikm7qa3ft" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://c5m28lb34u6fl" path="res://player.gd" id="2_0xm2m"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(1152, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(24, 643)
+
 [node name="Main" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1154.0
+offset_left = 10.0
+offset_right = 1164.0
 offset_bottom = 650.0
 color = Color(0.215902, 0.215902, 0.215902, 1)
 
-[node name="Wall 4" type="Polygon2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Wall 4" type="Polygon2D" parent="Area2D"]
 color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(1152, 0, 1152, 24, 0, 24, 0, 0)
 
-[node name="Polygon2D" type="Polygon2D" parent="Wall 4"]
+[node name="Polygon2D" type="Polygon2D" parent="Area2D/Wall 4"]
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 16, 16, 1136, 16, 1136, 8)
 
-[node name="Wall 3" type="Polygon2D" parent="."]
+[node name="Wall 3" type="Polygon2D" parent="Area2D"]
 position = Vector2(0, 624)
 color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(1152, 0, 1152, 24, 0, 24, 0, 0)
 
-[node name="Polygon2D" type="Polygon2D" parent="Wall 3"]
+[node name="Polygon2D" type="Polygon2D" parent="Area2D/Wall 3"]
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 16, 16, 1136, 16, 1136, 8)
 
-[node name="Wall" type="Polygon2D" parent="."]
+[node name="Wall" type="Polygon2D" parent="Area2D"]
 color = Color(0.489622, 0.489622, 0.489622, 1)
 polygon = PackedVector2Array(0, 0, 24, 0, 24, 648, 0, 648)
 
-[node name="Polygon2D" type="Polygon2D" parent="Wall"]
+[node name="Polygon2D" type="Polygon2D" parent="Area2D/Wall"]
 color = Color(0.60933, 0.60933, 0.60933, 1)
 polygon = PackedVector2Array(8, 640, 16, 640, 16, 8, 8, 8)
 
-[node name="Wall 2" type="Polygon2D" parent="."]
+[node name="Wall 2" type="Polygon2D" parent="Area2D"]
 position = Vector2(1128, 0)
 color = Color(0.489622, 0.489622, 0.489622, 1)
 polygon = PackedVector2Array(0, 0, 24, 0, 24, 648, 0, 648)
 
-[node name="Polygon2D" type="Polygon2D" parent="Wall 2"]
+[node name="Polygon2D" type="Polygon2D" parent="Area2D/Wall 2"]
 color = Color(0.60933, 0.60933, 0.60933, 1)
 polygon = PackedVector2Array(8, 640, 16, 640, 16, 8, 8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(576, 12)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(12, 321.5)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1140, 324)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(576, 636)
+shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.607843, 0.607843, 0.607843, 1)
