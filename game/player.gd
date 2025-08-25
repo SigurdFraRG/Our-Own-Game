@@ -22,3 +22,6 @@ func _process(delta):
 		velocity = velocity.normalized() * speed
 		position += velocity * delta
 		position = position.clamp(Vector2.ZERO, screen_size)
+		
+		position.y = clamp(position.y,40, 605)
+		position.x = clamp(position.x,40, 1110)
