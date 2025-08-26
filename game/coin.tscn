@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://blwsb723enf1w"]
+
+[ext_resource type="Script" uid="uid://djoejuko78ogo" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://cusr3oqvaxp24" path="res://bitcoin-pixel-art-icon-free-vector-removebg-preview.png" id="2_v7riw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdq0q"]
+radius = 19.0263
+
+[node name="coin" type="Area2D"]
+script = ExtResource("1_0t63x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_v7riw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pdq0q")
