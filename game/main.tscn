@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bday58uo6gp1b"]
 
 [ext_resource type="PackedScene" uid="uid://dfm7ikm7qa3ft" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://blwsb723enf1w" path="res://coin.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://daerjxkawewnu" path="res://coin.tscn" id="2_0xm2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1152, 24)
@@ -99,3 +99,4 @@ position = Vector2(576, 328)
 scale = Vector2(0.5, 0.5)
 
 [node name="coin" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(576, 208)
