@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt7seevw50q05"]
+
+[ext_resource type="Script" uid="uid://dxtne2iwffncp" path="res://startscreen.gd" id="1_8hh42"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_8hh42"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_nrfbx"]
+events = [SubResource("InputEventAction_8hh42")]
+
+[node name="Startscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("1_8hh42")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -556.0
+offset_right = 596.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -459.0
+offset_top = 10.0
+offset_right = 459.0
+offset_bottom = 287.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Collect Coins 
+to pay of your debt"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = 304.0
+offset_right = 23.0
+offset_bottom = 335.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_nrfbx")
+text = "Start"
