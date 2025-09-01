@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bday58uo6gp1b"]
+[gd_scene load_steps=9 format=3 uid="uid://bday58uo6gp1b"]
 
 [ext_resource type="Script" uid="uid://dx4ugamqlp4i2" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dfm7ikm7qa3ft" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://daerjxkawewnu" path="res://coin.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cp8mdnnvsbdod" path="res://coin counter.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://bgl2lpxqpk4oc" path="res://coin-257878.mp3" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://ytgoqptxer5v" path="res://that-dumb-panic-attack-in-1987-old-cartoons-280905.mp3" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1152, 24)
@@ -107,3 +108,8 @@ scale = Vector2(0.5, 0.5)
 
 [node name="coinsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_lquwl")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_7mycd")
+volume_db = -0.5
+parameters/looping = true

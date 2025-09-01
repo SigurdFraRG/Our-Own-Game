@@ -7,6 +7,7 @@ var coins_collected = 0
 
 func _ready():
 	_spawn_new_coin()
+	$Music.play()
 
 func _spawn_new_coin():
 	if coin_scene:
