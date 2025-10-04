@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bday58uo6gp1b"]
+[gd_scene load_steps=10 format=3 uid="uid://bday58uo6gp1b"]
 
 [ext_resource type="Script" uid="uid://dx4ugamqlp4i2" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dfm7ikm7qa3ft" path="res://player.tscn" id="1_ig7tw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cp8mdnnvsbdod" path="res://coin counter.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://bgl2lpxqpk4oc" path="res://coin-257878.mp3" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://ytgoqptxer5v" path="res://that-dumb-panic-attack-in-1987-old-cartoons-280905.mp3" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://ojcmmpnljqx2" path="res://minecraft__moss_stone_brick_textured_wallpaper_by_elbarnzo_d8edwxz-fullview.jpg" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1152, 24)
@@ -30,6 +31,7 @@ color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(1152, 0, 1152, 24, 0, 24, 0, 0)
 
 [node name="Polygon2D" type="Polygon2D" parent="Wall 4/Polygon2D5"]
+visible = false
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 16, 16, 1136, 16, 1136, 8)
 
@@ -45,6 +47,7 @@ color = Color(0.490196, 0.490196, 0.490196, 1)
 polygon = PackedVector2Array(1152, 0, 1152, 24, 0, 24, 0, 0)
 
 [node name="Polygon2D" type="Polygon2D" parent="Wall 3/Polygon2D"]
+visible = false
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 16, 16, 1136, 16, 1136, 8)
 
@@ -60,6 +63,7 @@ color = Color(0.489622, 0.489622, 0.489622, 1)
 polygon = PackedVector2Array(0, 0, 24, 0, 24, 648, 0, 648)
 
 [node name="Polygon2D" type="Polygon2D" parent="Wall 2/Polygon2D"]
+visible = false
 color = Color(0.60933, 0.60933, 0.60933, 1)
 polygon = PackedVector2Array(8, 640, 16, 640, 16, 8, 8, 8, 8, 471.989)
 
@@ -74,6 +78,7 @@ color = Color(0.489622, 0.489622, 0.489622, 1)
 polygon = PackedVector2Array(0, 0, 24, 0, 24, 648, 0, 648)
 
 [node name="Polygon2D" type="Polygon2D" parent="Wall/Polygon2D"]
+visible = false
 color = Color(0.60933, 0.60933, 0.60933, 1)
 polygon = PackedVector2Array(8, 640, 16, 640, 16, 8, 8, 8)
 
@@ -82,23 +87,32 @@ position = Vector2(576, 12)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 24, 8, 24, 16, 16, 16)
 
 [node name="Polygon2D4" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(0, 624)
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 24, 8, 24, 16, 16, 16)
 
 [node name="Polygon2D3" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(1112, 624)
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 24, 8, 24, 8, 24, 16, 16, 16)
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(1112, 0)
 color = Color(0.607843, 0.607843, 0.607843, 1)
 polygon = PackedVector2Array(16, 8, 24, 8, 24, 8, 24, 16, 16, 16)
+
+[node name="MinecraftMossStoneBrickTexturedWallpaperByElbarnzoD8Edwxz-fullview" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.07813, 1.04167)
+texture = ExtResource("7_272bh")
 
 [node name="player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(576, 328)
@@ -111,5 +125,5 @@ stream = ExtResource("5_lquwl")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_7mycd")
-volume_db = -0.5
+volume_db = -80.0
 parameters/looping = true
